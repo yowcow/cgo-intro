@@ -4,10 +4,10 @@ all: $(BIN)
 	ldd $(BIN) || true
 
 $(BIN):
-	go build --ldflags '-extldflags "-static"' -x -o $@
+	GO111MODULE=on go build --ldflags '-extldflags "-static"' -x -o $@
 
 test:
-	go test -v ./
+	GO111MODULE=on go test -v ./
 
 clean:
 	rm -rf $(BIN)
