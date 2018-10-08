@@ -6,5 +6,5 @@ go:
 install:
   - make
 
-test:
+script:
   - make test
